@@ -1,0 +1,52 @@
+.treeview{
+    background-color: #201b1b;
+    color: white;
+}
+
+.jstree-default .jstree-hovered{
+    color: white;
+    background-color: #201b1b;
+}
+
+.jstree-default .jstree-clicked{
+    color: white;
+    background-color: #201b1b;
+}
+
+.app{
+    background-color: #2b2b2b;
+}
+
+.preview{
+    background-color: #282a36;
+    border-left-color: #484848;
+    border-left-style: groove;
+}
+
+.console{
+    background-color: #0d1d38;
+    border-top-color: #484848;
+    border-top-style: groove;
+}
+
+tr{
+    border-top: hidden;
+}
+
+.console > *{
+    color: white;
+}
+
+#output-table{
+    border-left-style: inset;
+    border-left-color: white;
+    border-left-width: 1px;
+}
+
+.fa-folder {
+    color: #f3ca00;
+}
+
+.fa-folder-open {
+    color: #f3ca00;
+}

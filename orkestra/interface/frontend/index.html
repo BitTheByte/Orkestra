@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Orkestra Framework</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <!-- js tree -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+
+        <!-- code highlight -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+        <link rel="stylesheet" href='/assets/css/dracula.css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/TRSasasusu/highlightjs-highlight-lines.js@1.1.6/highlightjs-highlight-lines.min.js"></script>
+        <link rel="stylesheet" href='/assets/css/main.css'>
+        <link rel="stylesheet" href='/assets/css/sidebar.css'>
+        <link rel="stylesheet" href='/assets/css/themes-dark.css'>
+    </head>
+    <body>
+        <main class="app">
+            <div class="top"></div>
+            <div class="treeview">
+                <div class="card-body">
+                    <h4 class="card-title">Welcome - v0.1(alpha)</h4>
+                    <p class="card-text"> This project still in active development. you may encounter some bugs, feel free to report on github
+                        <br></br>
+                        To Get started by make sure you're running rooted version of Android Emulator after, click on "Import" button
+                        and upload your target apk using the debugger menu you should specify your launch options. you'll not be able
+                        to set any breakpoints before attaching the debugger (this process is automatic)
+                    </p>
+                    <a href="#" class="card-link">Docs</a>
+                    <a href="https://github.com/bitthebyte/orkesta/issues" class="card-link">Report Issue</a>
+                </div>
+            </div>
+            <div class="preview">
+                <div class="code">
+                    <div class="card getstarted bg-dark text-white">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <p class="card-text"> <img src="/assets/img/logo.png" class="card-img-top" />
+                                <br>
+                                <a href="https://github.com/bitthebyte/orkestra">Orkestra</a>
+                                (orchestra) is an inspection framework for android applications.
+                                thanks for the android community several tools were created to debug and analyse android applications,
+                                this framework is built over those tools the real heros are
+                                <a href="https://github.com/frida">Frida</a> and<a href="https://github.com/skylot/jadx">Jadx</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="console"></div>
+        </main>
+        <div class="models"></div>
+        <script src="/assets/js/utils.js"></script>
+        <script src='/assets/js/main.js'></script>
+        <script type="module" src="/assets/js/console.js"></script>
+    </body>
+
+</html>
