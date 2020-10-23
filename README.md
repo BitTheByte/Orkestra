@@ -11,8 +11,10 @@ Make sure you have:
   - Python >= 3.7
   - Rooted Android Emulator 
   
-Then install python using the following command
-  
+Then install Orkestra using the following commands
+ ```bash
+ $ git clone https://github.com/BitTheByte/Orkestra && cd Orkestra
+ ```
  ```bash
  $ pip install -r requirements.txt
  ```
