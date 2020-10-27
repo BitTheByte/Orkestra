@@ -31,6 +31,7 @@ def index(path):
 
 def upload():
     uploaded_file = request.files['file']
+    uploaded_file.filename = uploaded_file.filename.lower()
     if uploaded_file.filename != '':
         uploaded_file.save(f"{ORKESTRA_UPLOAD_DIR}/{os.path.basename(uploaded_file.filename)}")
         logger.info(f"uploaded file={uploaded_file.filename} path={uploaded_file.filename}")

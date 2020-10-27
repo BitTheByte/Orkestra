@@ -72,10 +72,6 @@ class Frida(object):
     def _push_tmp_file(self, file_path):
         tmp_path = f"/data/local/tmp/{os.path.basename(file_path)}"
         temp_files = subprocess.check_output('adb shell "ls /data/local/tmp"', shell=True).decode()
-
-        if os.path.basename(file_path) in temp_files:  # FIXME
-            return tmp_path
-
         subprocess.check_call(f"adb push {file_path} {tmp_path}", shell=True)
         return tmp_path
 
@@ -83,11 +79,11 @@ class Frida(object):
         subprocess.check_call(f'adb shell "chmod {mode} {file_path}"', shell=True)
 
     def _run_as_daemon(self, server_path):
-        subprocess.check_call(f'adb shell ".{server_path} -D &"')
+        subprocess.check_call(f'adb shell ".{server_path} -D &"', shell=True)
 
     def _kill_all(self):
         try:
-            subprocess.check_call('adb shell "kill -9 `pgrep -i \'frida\'`"', shell=True)
+            subprocess.check_call('adb shell "kill -9 `pgrep -i \'frida\'` &> /dev/null"', shell=True)
         except:
             pass
 
