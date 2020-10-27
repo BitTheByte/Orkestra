@@ -24,7 +24,7 @@ Then install Orkestra using the following commands
  ```bash
  $ python main.py
  ```
- if everything goes will you will be able to access the main interface on http://127.0.0.1:8080
+ if everything goes will you will be able to access the main interface on http://127.0.0.1:7001
  
  <img src="https://i.ibb.co/G5BdSQm/main.png">
  
