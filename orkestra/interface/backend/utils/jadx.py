@@ -3,7 +3,7 @@ import subprocess
 import os
 
 
-JADX_BIN = "orkestra/interface/backend/jadx/bin/jadx.bat" if os.name =="nt" else "orkestra/interface/backend/jadx/bin/jadx"
+JADX_BIN = "orkestra\\interface\\backend\\jadx\\bin\\jadx.bat" if os.name =="nt" else "orkestra/interface/backend/jadx/bin/jadx"
 
 
 class Jadx(object):
