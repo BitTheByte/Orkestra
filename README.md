@@ -1,7 +1,7 @@
 # Orkestra
 <p align="center">
     <a href="https://twitter.com/BitTheByte">
-      <img src="https://i.ibb.co/S6m3Wzz/logo-black.png">
+      <img src="https://i.ibb.co/Kjr2zHn/logo-black.png">
     </a>
     <h3 align="center">The Android Inspection Framework</h3>
 </p>
