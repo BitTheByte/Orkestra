@@ -43,12 +43,11 @@ class Frida(object):
             return  # FIXME
 
         logger.info(f"downloading required server files to {self.__bin_dir}")
-
-        response = requests.get("https://github.com/frida/frida/releases/latest").text
-        urls = re.findall('<a href=\"/frida/frida/releases/download/.*?\"', response)
-        servers = ["https://github.com" + re.findall('"(.*)"', url)[0] for url in urls if
-                   url.find("frida-server") != -1 and url.find("android") != -1]
-
+        
+        res = requests.get("https://api.github.com/repos/frida/frida/releases/latest").json()
+        assets = list(filter(lambda x: x["name"].startswith("frida-server") and "android" in x["name"],res["assets"]))
+        servers =  [asset["browser_download_url"] for asset in assets]
+        
         for server in servers:
             self.__download(server, self.__bin_dir + "/" + server.split("/")[-1])
 
