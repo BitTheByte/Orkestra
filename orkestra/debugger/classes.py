@@ -17,7 +17,7 @@ class ClassHooker:
         script.on("message", self.result)
         script.load()
 
-        while not class_name in self.descriptions:
+        while class_name not in self.descriptions:
             # TODO: this is not safe and can hang forever
             pass
 

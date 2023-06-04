@@ -50,7 +50,7 @@ class Frida(object):
                    url.find("frida-server") != -1 and url.find("android") != -1]
 
         for server in servers:
-            self.__download(server, self.__bin_dir + "/" + server.split("/")[-1])
+            self.__download(server, f"{self.__bin_dir}/" + server.split("/")[-1])
 
     def get_usb_device(self):
         subprocess.check_call("adb root", shell=True)
@@ -66,7 +66,7 @@ class Frida(object):
                 return device
 
             self._kill_all()
-        logger.error(f"unable to find suitable server for this target")
+        logger.error("unable to find suitable server for this target")
         return None
 
     def _push_tmp_file(self, file_path):

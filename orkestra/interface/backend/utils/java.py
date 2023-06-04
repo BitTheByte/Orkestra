@@ -7,10 +7,7 @@ def java_is_declaration(line):
     conditions = [
         line[-1] == "{",
     ]
-    for c in conditions:
-        if c == False:
-            return False
-    return True
+    return False not in conditions
 
 
 def java_extend_type(name, fullcode):
@@ -26,7 +23,7 @@ def java_parse_declaration(line, fullcode):
     args = args.strip().replace("(", "").replace(")", "")
     args = [arg for arg in args.strip().split(",") if arg.strip()]
     overloads = []
-    if len(args) == 0:
+    if not args:
         return name, overloads
     for arg in args:
         argtype, argname = arg.strip().split(" ")
